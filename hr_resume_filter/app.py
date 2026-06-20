@@ -244,7 +244,7 @@ if st.session_state.results:
         else:
             return "color: red; font-weight: bold"
 
-    styled_df = df.style.applymap(color_score, subset=["匹配分数"])
+    styled_df = df.style.map(color_score, subset=["匹配分数"])
     st.dataframe(styled_df, use_container_width=True, hide_index=True)
 
     # 导出按钮
