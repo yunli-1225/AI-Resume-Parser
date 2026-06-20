@@ -43,6 +43,9 @@ def build_results_dataframe(results: List[Dict]) -> pd.DataFrame:
             "风险提示": "\n".join(r.get("red_flags", [])),
         })
 
+    if not rows:
+        return pd.DataFrame(columns=["序号", "候选人姓名", "匹配分数", "Top3匹配理由", "风险提示"])
+
     df = pd.DataFrame(rows)
 
     # 按分数降序排列（分数为 "-" 的排在最后）
