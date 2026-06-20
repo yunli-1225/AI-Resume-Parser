@@ -15,7 +15,6 @@ const {
 } = aiScoring;
 const checkPositionMatch = aiScoring.checkPositionMatch;
 
-const { matchKeywords } = require("../services/keywordMatcher");
 const fs = require('fs');
 const path = require('path');
 const xlsx = require('xlsx');
